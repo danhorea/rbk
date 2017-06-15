@@ -23,7 +23,7 @@ public class SphereTest extends Application{
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		Sphere sphere = new Sphere(100);
+		Sphere sphere = new Sphere(100, 7);
 		Group root = new Group(sphere);
 		root.setTranslateX(320);
 		root.setTranslateY(240);
@@ -32,6 +32,7 @@ public class SphereTest extends Application{
 		primaryStage.show();
 		
 		sphere.translateXProperty().bind(translateX);
+		sphere.translateYProperty().bind(translateX);
 		animate();
 		
 	}
