@@ -1,4 +1,4 @@
-package com.rbk;
+package com.zold;
 
 import javafx.application.Application;
 import javafx.beans.binding.When;

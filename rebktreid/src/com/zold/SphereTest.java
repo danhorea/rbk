@@ -1,4 +1,4 @@
-package com.rbk;
+package com.zold;
 
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;

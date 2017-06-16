@@ -81,8 +81,12 @@ public class EarthBox extends Application {
     
     final Box earth = new Box(400, 400, 400);
     earth.setMaterial(earthMaterial); 
-          
-    final Group parent = new Group(earth);
+    
+    Group parent0 = new Group(new Box(400, 500, 400));
+//    parent0.setTranslateX(450);
+//    parent0.setTranslateY(450);
+//    parent0.setTranslateZ(100);
+    final Group parent = new Group(earth, parent0, new Box(100, 500, 400));
     parent.setTranslateX(450);
     parent.setTranslateY(450);
     parent.setTranslateZ(100);
@@ -108,11 +112,13 @@ public class EarthBox extends Application {
 
       anchorAngleX = angleX.get();
       anchorAngleY = angleY.get();
+      System.out.println(anchorAngleX);
     });
 
     scene.setOnMouseDragged(event -> {
       angleX.set(anchorAngleX - (anchorY -  event.getSceneY()));
       angleY.set(anchorAngleY + anchorX -  event.getSceneX());
+      System.out.println(anchorAngleX);
     });
 
     PointLight pointLight = new PointLight(Color.WHITE);

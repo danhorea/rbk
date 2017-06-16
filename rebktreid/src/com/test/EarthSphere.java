@@ -111,7 +111,7 @@ public class EarthSphere extends Application {
     });         
       
     scene.setOnMouseDragged(event -> {                
-      //angleX.set(anchorAngleX - (anchorY -  event.getSceneY()));
+      angleX.set(anchorAngleX - (anchorY -  event.getSceneY()));
       angleY.set(anchorAngleY + anchorX -  event.getSceneX());
     });         
       
